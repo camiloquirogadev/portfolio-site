@@ -4,6 +4,7 @@ import react from '@vitejs/plugin-react';
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: '/portfolio-site/',
   plugins: [react()],
   optimizeDeps: {},
   // @ts-expect-error - "test" is used by Vitest, ignored by Vite at build time
