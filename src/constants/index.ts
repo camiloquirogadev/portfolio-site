@@ -69,3 +69,13 @@ export const translations = {
     seeProjects: 'See projects'
   }
 } as const;
+
+// Helper function to generate mailto links with pre-filled subject and body
+export const createMailtoLink = (lang: 'es' | 'en' = 'es') => {
+  const subject = lang === 'es' ? 'Consulta desde portfolio' : 'Inquiry from portfolio';
+  const body = lang === 'es'
+    ? 'Hola Camilo,\n\nMe gustaría contactarte para hablar sobre un proyecto.\n\nSaludos,'
+    : 'Hi Camilo,\n\nI would like to contact you to discuss a project.\n\nBest regards,';
+
+  return `mailto:${personalInfo.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+};

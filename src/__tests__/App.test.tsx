@@ -29,7 +29,8 @@ describe('App', () => {
     render(<App />);
     const contactLinks = screen.getAllByText(/Contactame/i);
     expect(contactLinks.length).toBeGreaterThan(0);
-    expect(contactLinks[0].closest('a')).toHaveAttribute('href', 'mailto:quirogacamilodev@gmail.com');
+    expect(contactLinks[0].closest('a')).toHaveAttribute('href', expect.stringContaining('mailto:quirogacamilodev@gmail.com'));
+    expect(contactLinks[0].closest('a')).toHaveAttribute('href', expect.stringContaining('subject=Consulta%20desde%20portfolio'));
   });
 
   it('renders project carousel', () => {

@@ -2,6 +2,7 @@ import { Mail } from 'lucide-react';
 import { useLanguageContext } from '../../contexts/LanguageContext';
 import { personalInfo } from '../../constants';
 import { translations } from '../../constants';
+import { createMailtoLink } from '../../constants';
 
 export const Footer = () => {
   const { lang } = useLanguageContext();
@@ -18,7 +19,7 @@ export const Footer = () => {
             {t.about}
           </a>
           <a
-            href={`mailto:${personalInfo.email}`}
+            href={createMailtoLink(lang)}
             className="text-slate-500 hover:text-slate-300 text-sm underline-offset-2 hover:underline transition-colors inline-flex items-center gap-1.5 px-2 py-0.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:focus-visible:ring-offset-slate-900"
           >
             <Mail className="w-4 h-4" aria-hidden="true" /> {t.contact}

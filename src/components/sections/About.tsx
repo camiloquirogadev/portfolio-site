@@ -2,6 +2,7 @@ import { Code2, Mail, ChevronRight } from 'lucide-react';
 import { useLanguageContext } from '../../contexts/LanguageContext';
 import { personalInfo } from '../../constants';
 import { translations } from '../../constants';
+import { createMailtoLink } from '../../constants';
 
 export const About = () => {
   const { lang } = useLanguageContext();
@@ -29,7 +30,7 @@ export const About = () => {
           </p>
           <div className="flex flex-wrap items-center justify-center gap-3">
             <a
-              href={`mailto:${personalInfo.email}`}
+              href={createMailtoLink(lang)}
               className="group px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-all duration-300 inline-flex items-center gap-2 hover:shadow-lg hover:shadow-blue-500/25 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:focus-visible:ring-offset-slate-900"
             >
               <Mail className="w-4 h-4" aria-hidden="true" /> {t.contact}

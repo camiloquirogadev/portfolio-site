@@ -3,6 +3,7 @@ import { Menu, Languages, Sun, Moon, Monitor } from 'lucide-react';
 import { useTheme } from '../../hooks/useTheme';
 import { useLanguageContext } from '../../contexts/LanguageContext';
 import { translations } from '../../constants';
+import { createMailtoLink } from '../../constants';
 
 export const Header = () => {
   const { lang, toggleLang } = useLanguageContext();
@@ -44,7 +45,7 @@ export const Header = () => {
             <a href="#sobre-mi" className="hover:text-slate-900 dark:hover:text-white transition-colors focus-visible:underline underline-offset-4">
               {t.about}
             </a>
-            <a href={`mailto:quirogacamilodev@gmail.com`} className="hover:text-slate-900 dark:hover:text-white transition-colors focus-visible:underline underline-offset-4">
+            <a href={createMailtoLink(lang)} className="hover:text-slate-900 dark:hover:text-white transition-colors focus-visible:underline underline-offset-4">
               {t.contact}
             </a>
 
@@ -157,7 +158,7 @@ export const Header = () => {
                   <a href="#sobre-mi" onClick={() => setMenuOpen(false)} className="block w-full px-3 py-3 rounded-lg text-slate-900 dark:text-slate-100 hover:bg-slate-100 dark:hover:bg-slate-800">
                     {t.about}
                   </a>
-                  <a href={`mailto:quirogacamilodev@gmail.com`} onClick={() => setMenuOpen(false)} className="block w-full px-3 py-3 rounded-lg text-slate-900 dark:text-slate-100 hover:bg-slate-100 dark:hover:bg-slate-800">
+                  <a href={createMailtoLink(lang)} onClick={() => setMenuOpen(false)} className="block w-full px-3 py-3 rounded-lg text-slate-900 dark:text-slate-100 hover:bg-slate-100 dark:hover:bg-slate-800">
                     {t.contact}
                   </a>
                 </div>

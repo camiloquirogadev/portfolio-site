@@ -2,6 +2,7 @@ import { Mail, Github, Linkedin } from 'lucide-react';
 import { useLanguageContext } from '../../contexts/LanguageContext';
 import { personalInfo } from '../../constants';
 import { translations } from '../../constants';
+import { createMailtoLink } from '../../constants';
 
 export const Hero = () => {
   const { lang } = useLanguageContext();
@@ -36,7 +37,7 @@ export const Hero = () => {
 
         <div className="flex flex-wrap gap-3 justify-center">
           <a
-            href={`mailto:${personalInfo.email}`}
+            href={createMailtoLink(lang)}
             className="px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-all duration-300 flex items-center gap-2 hover-lift shadow-lg hover:shadow-blue-500/25 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:focus-visible:ring-offset-slate-900"
           >
             <Mail className="w-4 h-4" aria-hidden="true" />
