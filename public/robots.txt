@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Point sitemap to the GitHub Pages project site
+Sitemap: https://camiloquirogadev.github.io/portafolio-cq/sitemap.xml

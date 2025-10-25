@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0f172a" />
+    <style>
+      /* Inline critical styles to avoid flash of unstyled skip link and white background */
+      html, body { background-color: #0f172a; }
+      .skip-link { position: absolute; left: -9999px; top: auto; width: 1px; height: 1px; overflow: hidden; }
+      .skip-link:focus { left: 1rem; top: 1rem; width: auto; height: auto; padding: 0.5rem 0.75rem; background: #1f2937; color: #fff; border-radius: 0.5rem; z-index: 1000; }
+    </style>
+    <script>
+      (function() {
+        try {
+          var theme = localStorage.getItem('theme');
+          var mql = window.matchMedia('(prefers-color-scheme: dark)');
+          var useSystem = !theme || theme === 'system';
+          var isDark = theme === 'dark' || (useSystem && mql.matches);
+          if (isDark) document.documentElement.classList.add('dark');
+          else document.documentElement.classList.remove('dark');
+        } catch (e) {}
+      })();
+    </script>
+    <title>Camilo Quiroga - Desarrollador Full Stack</title>
+    <meta name="description" content="Desarrollador Full Stack especializado en React, TypeScript, Node.js y soluciones web modernas. Disponible para proyectos freelance y colaboraciones." />
+    <meta name="keywords" content="desarrollador full stack, react, typescript, node.js, python, postgresql, aws, docker, freelance" />
+    <meta name="author" content="Camilo Quiroga" />
+  <link rel="canonical" href="https://camiloquirogadev.github.io/portafolio-cq/" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+    <meta property="og:title" content="Camilo Quiroga - Desarrollador Full Stack" />
+    <meta property="og:description" content="Desarrollador Full Stack especializado en React, TypeScript, Node.js y soluciones web modernas." />
+    <meta property="og:url" content="https://camiloquirogadev.github.io/portafolio-cq/" />
+  <meta property="og:image" content="https://camiloquirogadev.github.io/portafolio-cq/favicon.svg" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:title" content="Camilo Quiroga - Desarrollador Full Stack" />
+    <meta property="twitter:description" content="Desarrollador Full Stack especializado en React, TypeScript, Node.js y soluciones web modernas." />
+  <meta property="twitter:image" content="https://camiloquirogadev.github.io/portafolio-cq/favicon.svg" />
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Camilo Quiroga",
+      "jobTitle": "Desarrollador Web Full Stack",
+      "email": "mailto:camilosolquiroga@gmail.com",
+  "url": "https://camiloquirogadev.github.io/portafolio-cq/",
+      "sameAs": [
+        "https://github.com/camiloquirogadev",
+        "https://linkedin.com/in/camilo-quiroga-dev/"
+      ]
+    }
+    </script>
+  </head>
+  <body>
+    <a href="#main" class="skip-link">Saltar al contenido</a>
+    <div id="root"></div>
+
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
