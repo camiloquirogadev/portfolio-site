@@ -43,7 +43,7 @@ export const portfolio = [
     titleEn: 'Patagonia Verde – Wildfire Monitoring',
     description: 'Plataforma de detección temprana de incendios en la Patagonia con mapas interactivos y datos satelitales en tiempo casi real de NASA FIRMS. Visualización clara de focos de calor, análisis temporal y filtros avanzados, optimizada para móviles.',
     descriptionEn: 'Early wildfire detection platform for Patagonia with interactive maps and near real-time satellite data from NASA FIRMS. Clear hotspot visualization, temporal analysis, and advanced filters, all optimized for mobile.',
-    image: '/images/patagonia-verde-cover.svg',
+    image: '/portfolio-site/images/patagonia-verde-cover.svg',
     technologies: ['React', 'TypeScript', 'Vite', 'Leaflet', 'Tailwind CSS', 'NASA FIRMS'],
     category: 'web-app',
     status: 'completed',
